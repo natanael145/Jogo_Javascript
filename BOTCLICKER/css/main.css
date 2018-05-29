@@ -1,0 +1,19 @@
+body {
+  background: url("../imgs/bannergame2.png") no-repeat center;
+  height:100%;
+  background-color: yellow;
+}
+#body-geral {
+    min-height: 100%;
+    position: relative;
+}
+#startbutton {
+    position:absolute;
+    top:80%;
+    left:40%;
+    margin-top:-50px;
+    margin-left:-50px;
+    padding: 30px;
+    background-color: darkviolet;
+    border-radius: 50px;
+}
