@@ -104,7 +104,13 @@ body {
     float: left;
     padding: 10px;
 }
-.fristupprice {
+.priceA1 {
+    float: left;
+    padding: 0;
+    margin: 10px;
+    font-family: 'Press Start 2P', cursive;
+}
+.priceB1 {
     float: left;
     padding: 0;
     margin: 10px;

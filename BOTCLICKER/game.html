@@ -8,11 +8,14 @@
     <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="css/game.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/alerts.css" />
     <script src="js/game.js"></script> 
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 </head>
 <body>  
     <div id="body-geral">
+        <div id="snackbar-sucess"> Upgrade sucess!</div>
+        <div id="snackbar-failed"> Upgrade failed!</div>
         <div class="col-sm-4">
             <div id="resources"> <img src="imgs/resources.png"></div>
             <p class="p-font">Click on this old fliperams to gain threads and circuits!</p>
@@ -39,24 +42,24 @@
         </div>
         <div class="col-md-2" id="upgrades">
             <img src="imgs/upgrades.png">
-            <div class="upgrade">
+            <div class="upgrade" id="up1">
                 <p class="p-font-upgrade">Conserte seu pequeno robô que está quebrado! </p>
                 <img class="buttonfio" src="imgs/fios.png">
-                <span class="fristupprice">25</span>
-                <img class="buttonfio" src="imgs/circuitos.png">
-                <span class="fristupprice">25</span>
-                <img class="buttonbuy" src="imgs/buybutton.png" >
+                <span class="priceA1">25</span>
+                <img class="buttoncircuito" src="imgs/circuitos.png">
+                <span class="priceB1">25</span>
+                <img class="buttonbuy" src="imgs/buybutton.png" onclick="buyUpgrade(25,25,'up1')">
             </div>
-            <div class="upgrade">
+            <div class="upgrade" id="up2">
                 <p class="p-font-upgrade">Aprimore o ganho de energia do seu robô! </p>
                 <img class="buttonfio" src="imgs/fios.png">
-                <img class="buttonfio" src="imgs/circuitos.png">
-                <img class="buttonbuy" src="imgs/buybutton.png" >
+                <img class="buttoncircuito" src="imgs/circuitos.png">
+                <img class="buttonbuy" src="imgs/buybutton.png" onclick="buyUpgrade()">
             </div>
             <div class="upgrade">
                 <p class="p-font-upgrade">Conserte seu pequeno robô que está quebrado! </p>
                 <img class="buttonfio" src="imgs/fios.png">
-                <img class="buttonfio" src="imgs/circuitos.png">
+                <img class="buttoncircuito" src="imgs/circuitos.png">
                 <img class="buttonbuy" src="imgs/buybutton.png" >
             </div>
         </div>                
