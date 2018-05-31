@@ -1,4 +1,4 @@
-//VARIABLES
+    //VARIABLES
 
 var qtcircuitos = 0;
 var qtfios = 0;
@@ -9,8 +9,14 @@ var clickQT = 1;
 var out = false;
 
 // ==== ADD CIRCUITS AND THREADS WHEN CLICKED ==============
+function setNoClickFlip(){
+    var element = document.getElementById("img-click");
+    element.setAttribute("src","imgs/clickFlip.png");
+}
 function clickitens(){
     myFunctionAdd();
+    var element = document.getElementById("img-click");
+    element.setAttribute("src","imgs/noclickFlip.png");
     qtfios = qtfios + clickQT;
     qtcircuitos = qtcircuitos + clickQT;
     document.getElementById('qtfios').innerHTML = qtfios;

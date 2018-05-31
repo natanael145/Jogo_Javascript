@@ -1,74 +1,91 @@
 <DOCTYPE <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>BOTCLICKER</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" media="screen" href="css/game.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="css/resources.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="css/alerts.css" />
-    <script src="js/game.js"></script> 
-    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-</head>
-<body>  
-    <div id="body-geral">
+    <html lang="pt-br">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>BOTCLICKER</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" media="screen" href="css/game.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="css/resources.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="css/alerts.css" />
+        <script src="js/game.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    </head>
+
+    <body>
         <div id="snackbar-sucess"> Upgrade sucess!</div>
         <div id="snackbar-failed"> Upgrade failed!</div>
-        <div id="snackbar-add"> ++ <img src="imgs/resources.png"></div>
-        <div class="col-sm-4">
-            <div id="resources"> <img src="imgs/resources.png"></div>
-            <p class="p-font">Click on this old fliperams to gain threads and circuits!</p>
-            <div id="pointclick" class="verde" onclick="clickitens()">
-                    <span id="clickfig" class="selectDisable" ><img id="img-click"src="imgs/fliperamOK.png" /></span>
-            </div>
-            <div id="fios"> 
-                <img class="selectDisable" src="imgs/fios.png" width="150" height="60" />
-                <span id="qtfios"> 0</span>     
-            </div>
-            <div id="circuitos">
-                <img class="selectDisable" src="imgs/circuitos.png" width="150" height="60" />
-                <span id="qtcircuitos"> 0</span> 
-            </div>
-            <div id="energia">
-                <img class="selectDisable" src="imgs/energy.png" width="150" height="60" />
-                <span id="qtenergia">0</span> 
-            </div>
-            <div id="energia">
-                <img class="selectDisable" src="imgs/energysec.png" width="150" height="60">
-                <span id="qtenergiasec">0</span>
+        <div id="snackbar-add"> ++
+            <img src="imgs/resources.png">
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4" id="res">
+                    <div id="resources">
+                        <img src="imgs/resources.png">
+                    </div>
+                    <div id="fios">
+                        <img class="selectDisable" src="imgs/fios.png" width="100" height="40" />
+                        <span id="qtfios"> 0</span>
+                    </div>
+                    <div id="circuitos">
+                        <img class="selectDisable" src="imgs/circuitos.png" width="100" height="40" />
+                        <span id="qtcircuitos"> 0</span>
+                    </div>
+                    <div id="energia">
+                        <img class="selectDisable" src="imgs/energy.png" width="100" height="40" />
+                        <span id="qtenergia">0</span>
+                    </div>
+                    <div id="energia">
+                        <img class="selectDisable" src="imgs/energysec.png" width="100" height="40" />
+                        <span id="qtenergiasec">0</span>
+                    </div>
+                    <div id="pointclick" onclick="clickitens()" onmousedown="setNoClickFlip()">
+                            <span id="clickfig" class="selectDisable">
+                                <img id="img-click" src="imgs/noclickFlip.png"/>
+                            </span>
+                        </div>
+                </div>
+               
+                <div class="col-lg-4" id="res">
+                </div>
+                <div class="col-lg-4" id="upgrades">
+                    <img class="selectDisable" src="imgs/upgrades.png">
+                    <div class="upgrade" id="up1">
+                        <p class="p-font-upgrade">Inserir peças faltantes!
+                            <br>(ENERGY +1/SEC) </p>
+                        <p class="p-font-priceUpgrade">THREADS :
+                            <span class="priceA1">25</span>
+                        </p>
+                        <p class="p-font-priceUpgrade"> CIRCUITS :
+                            <span class="priceB1">25</span>
+                        </p>
+                        <img class="buttonbuy" src="imgs/upgradebutton.png" onclick="buyUpgrade(25,25,0,'up1')">
+                    </div>
+                    <div class="upgrade" id="up2">
+                        <p class="p-font-upgrade">
+                            Usar velhas baterias dos fliperamas pra alimentar sua energia!
+                            <br>(ENERGY +5/SEC)
+                            <br>(CLICKS +1)
+                        </p>
+                        <p class="p-font-priceUpgrade">
+                            THREADS :
+                            <span class="priceA1">175</span>
+                        </p>
+                        <p class="p-font-priceUpgrade"> CIRCUITS :
+                            <span class="priceB1">175</span>
+                        </p>
+                        <p class="p-font-priceUpgrade">ENERGY :
+                            <span class="priceC1">100</span>
+                        </p>
+                        <img class="buttonbuy" src="imgs/upgradebutton.png" onclick="buyUpgrade(175,175,100,'up2')">
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="col-md-2" >
-            <img class="selectDisable" src="imgs/yourobot.png" width="170" height="60"/>
-            <img class="selectDisable" src="imgs/robot1.png" width="200" height="150">
-            <p class="p-font">Use obtained resources for upgrade your robot! </p>
-        </div>
-        <div class="col-md-2" id="upgrades">
-            <img class="selectDisable" src="imgs/upgrades.png">
-            <div class="upgrade" id="up1">
-                <p class="p-font-upgrade">Inserir peças faltantes!<br>(ENERGY +1/SEC) </p>
-                <p class="p-font-priceUpgrade">THREADS :<span class="priceA1">25</span> </p>
-                <p class="p-font-priceUpgrade"> CIRCUITS : <span class="priceB1">25</span></p>
-                <img class="buttonbuy" src="imgs/upgradebutton.png" onclick="buyUpgrade(25,25,0,'up1')">
-            </div>
-            <div class="upgrade" id="up2">
-                <p class="p-font-upgrade">Usar velhas baterias dos fliperamas pra alimentar sua energia!<br>(ENERGY +5/SEC) <br>(CLICKS +1)</p>
-                <p class="p-font-priceUpgrade">THREADS :<span class="priceA1">175</span> </p>
-                <p class="p-font-priceUpgrade"> CIRCUITS : <span class="priceB1">175</span></p>
-                <p class="p-font-priceUpgrade">ENERGY :<span class="priceC1">100</span> </p>
-                <img class="buttonbuy" src="imgs/upgradebutton.png" onclick="buyUpgrade(175,175,100,'up2')">
-            </div>
-            <div class="upgrade">
-                <p class="p-font-upgrade">Pegar circuitos dos antigos fliperamas para melhorar sua AI(Inteligência Artificial)!<br>(ENERGY +5/SEC)<br>(CLICKS 2x) </p>
-                <p class="p-font-priceUpgrade">THREADS :<span class="priceA1">175</span> </p>
-                <p class="p-font-priceUpgrade"> CIRCUITS : <span class="priceB1">175</span></p>
-                <p class="p-font-priceUpgrade">ENERGY :<span class="priceC1">100</span> </p>
-                <img class="buttonbuy" src="imgs/upgradebutton.png" >
-            </div>
-        </div>                
-    </div>
-</body>
-</html> 
+    </body>
+
+    </html>

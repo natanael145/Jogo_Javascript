@@ -1,33 +1,21 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
 body {
-    height:100%;
-    background-color: yellow;
-}
-#body-geral {
-      min-height: 100%;
-      position: relative;
-      background-color: yellow;
-}
-
-.col-sm-4 {
-    background: #FFF;
-    text-align: center;
-    padding: 15px;
-    padding-bottom: 100px;
-    margin: 20px;
-    margin-bottom: 5px;
-    padding-bottom: 5px;
-    border-radius: 10px;
-}
-.col-md-2 {
-    background: #FFF;
-    text-align: center;
-    padding: 15px;
-    padding-bottom: 25px;
-    margin: 20px;
-    border-radius: 10px;
-    float: left;
+    background-image: url(../imgs/fundo1.png);
+    background-repeat: no-repeat;
+    -moz-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    position: relative;
 }
 
+.col-lg-4 {
+    text-align: center;
+    border-radius: 10px;
+    background-color: transparent;
+}
 .p-font {
     font-family: 'Press Start 2P', cursive;
     font-size: 15px;
@@ -48,19 +36,18 @@ body {
 .img-rad{
     border-radius: 100%;
 }
-#firstrobot {
-    width: 100px;
-    height: 100px;
-}
+
 #upgrades {
-    width: 380px;
+    margin: auto;
+    margin-top: 20px; 
 }
 .upgrade {
-    border: 10px solid darkmagenta;
-    border-left: none;
-    border-right: none;
+    border: solid 1px white;
+    border-radius: 50px;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.7);
     margin: 10px;
-    padding: 10px;
+    box-sizing: border-box;
 }
 .buttonbuy {
     width:100; 
@@ -70,18 +57,7 @@ body {
     border-radius: 15px;
     cursor: pointer;
 }
-.buttonfio {
-    width:70; 
-    height:40;
-    float: left;
-    padding: 10px;
-}
-.buttoncircuito {
-    width:70; 
-    height:40;
-    float: left;
-    padding: 10px;
-}
+
 .priceA1 {
     padding: 0;
     margin: 10px;
@@ -93,4 +69,9 @@ body {
     margin: 10px;
     margin-left: 0; 
     font-family: 'Press Start 2P', cursive;
+}
+#robot-chao {
+    position: absolute;
+    bottom: 5px;
+    padding: 10px;
 }

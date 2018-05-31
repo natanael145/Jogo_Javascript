@@ -1,6 +1,9 @@
+#res {
+    min-height: 100%;
+}
 #resources {
     margin: 10px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     padding: 10px;
 }  
 #fios {
@@ -16,25 +19,25 @@
 #qtfios {
     padding: 0;
     float: right;
-    font-size: 40px;
+    font-size: 30px;
     font-family: 'Press Start 2P', cursive;
 }
 #qtcircuitos {
     padding: 0;
     float: right;
-    font-size: 40px;
+    font-size: 30px;
     font-family: 'Press Start 2P', cursive;
 }
 #qtenergia {
     padding: 0;
     float: right;
-    font-size: 40px;
+    font-size: 30px;
     font-family: 'Press Start 2P', cursive;
 }
 #qtenergiasec {
     padding: 0;
     float: right;
-    font-size: 40px;
+    font-size: 30px;
     font-family: 'Press Start 2P', cursive;
 }
 
@@ -43,10 +46,10 @@
     padding: 10px;
     cursor: pointer;
     border-radius: 50px;  
-    background: darkmagenta;  
+    position: absolute;
+    left:0 ;
+    bottom: 5px;
 }
-
-
 .selectDisable {
     -webkit-user-select: none;
     -khtml-user-select: none;
