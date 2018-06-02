@@ -2,6 +2,8 @@
 var up3 = document.createElement("div"); 
 up3.className = "upgrade";
 up3.id = 'up3';
+up3.style.webkitAnimation= "bounceInUp 2s";
+up3.style.animation = "bounceInUp 2s";
 var contentUp3 = document.createElement("p");
 contentUp3.className = "p-font-upgrade";
 contentUp3.innerHTML = "Recolha os circuitos e placas-mãe dos velhos fliperamas para melhorar sua AI(Inteligência Artificial)!<br>(CLICKS 2x)<br>(ENERGY 2x)"

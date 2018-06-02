@@ -8,6 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
         <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" media="screen" href="css/animations.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="css/game.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="css/resources.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="css/alerts.css" />
@@ -58,13 +59,15 @@
                 </div>
                 <div class="col-lg-3" id="upgrades">
                     <div id="upgrades-visible" onclick="showUpgradesOpen()">
-                        <img class="selectDisable" src="imgs/upgrades-normal.png" class="img-upgrade">
+                        <div id="img-upgrade">
+                            <img class="selectDisable" src="imgs/upgrades-normal.png" >
+                        </div>
                         <div id="icon-show">
                             <span class="glyphicon glyphicon-chevron-down"></span>
                         </div>  
                     </div>
 
-                    <img class="selectDisable" src="imgs/upgrades.png" class="img-upgrade">
+                    <img class="selectDisable" src="imgs/upgrades.png">
                     <div class="upgrade" id="up1">
                         <p class="p-font-upgrade">Inserir peças faltantes!
                             <br>(ENERGY +1/SEC) </p>
@@ -74,7 +77,7 @@
                         <p class="p-font-priceUpgrade"> CIRCUITS :
                             <span class="priceB1">25</span>
                         </p>
-                        <img class="buttonbuy" src="imgs/upgradebutton.png" onclick="buyUpgrade(25,25,0,'up1')">
+                        <img class="buttonbuy" src="imgs/upgradebutton.png" onclick="buyUpgrade(25,25,0,'up1')"/>
                     </div>
                     <div class="upgrade" id="up2">
                         <p class="p-font-upgrade">

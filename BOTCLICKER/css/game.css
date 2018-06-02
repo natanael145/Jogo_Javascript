@@ -45,15 +45,17 @@ body {
     background-color: rgba(255, 255, 255, 0.7);
     padding: 10px;
     padding-top: 0;
-    position: relative;
+
 }
 #upgrades-visible {
     visibility: visible;
+    position: absolute;
     padding: 20px;
     padding-bottom: 40px;
     background-color: rgba(255, 255, 255, 0.7);
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
+    max-height: 100%;
 }
 .upgrade {
     border: solid 5px darkmagenta;
@@ -99,19 +101,15 @@ body {
     font-size: 30px;
     padding: 0;
     left: 49%;
-    margin-top: 2%;
+    top: 60%;
     cursor: pointer;
 }
-.animation {
-    animation: upgradesfade 3s ;
-    -webkit-animation: upgradesfade 3s;
+.animationFadeDown {
+    animation: fadeInDown 1s ;
+    -webkit-animation: fadeInDown 1s;
 }
-@-webkit-keyframes upgradesfade {
-    from {top: 0; opacity: 0;} 
-    to {top: 100%; opacity: 1;}
+#img-upgrade {
+    position: relative;
+    top: 5%;
 }
 
-@keyframes upgradesfade {
-    from {top: 0; opacity: 0;} 
-    to {top: 100%; opacity: 1;}
-}

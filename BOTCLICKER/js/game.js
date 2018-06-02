@@ -72,22 +72,37 @@ function snackNewUpgrade() {
     setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
 }
 function showUpgradesOpen(){
-    var x = document.getElementById("upgrades-visible");
-    var y = document.getElementById("upgrades");
-    x.style.visibility = "hidden";
-    x.style.padding = 0;
-    x.style.paddingBottom = 0;
-    y.className="col-lg-3 animation";
-    y.style.visibility = "visible";
+    var upgradesVisible = document.getElementById("upgrades-visible");
+    var upgradesHidden = document.getElementById("upgrades");
+    var imgUpgrade = document.getElementById("img-upgrade");
+    var iconShow = document.getElementById("icon-show");
+    upgradesVisible.style.visibility = "hidden";
+    upgradesVisible.style.padding = 0;
+    upgradesVisible.style.paddingBottom = 0;
+    upgradesVisible.style.webkitAnimation = "none";
+    upgradesHidden.className="col-lg-3 animationFadeDown";
+    upgradesHidden.style.visibility = "visible";
+    imgUpgrade.style.webkitAnimation = "none";
+    imgUpgrade.style.animation = "none";
+    iconShow.style.webkitAnimation = "none";
+    iconShow.style.animation = "none";
 }
 function showUpgradesClose(){
-    var x = document.getElementById("upgrades-visible");
-    var y = document.getElementById("upgrades");
-    x.style.visibility = "visible";
-    x.style.padding = 20;
-    x.style.paddingBottom =40;
-    y.className="col-lg-3";
-    y.style.visibility = "hidden";
+    var upgradesVisible = document.getElementById("upgrades-visible");
+    var upgradesHidden = document.getElementById("upgrades");
+    var imgUpgrade = document.getElementById("img-upgrade");
+    var iconShow = document.getElementById("icon-show");
+    upgradesVisible.style.padding = 20;
+    upgradesVisible.style.paddingBottom =40;
+    upgradesVisible.style.visibility = "visible";
+    upgradesVisible.style.webkitAnimation = "fadeInUp2 1s";
+    upgradesVisible.style.animation = "fadeInUp2 1s";
+    upgradesHidden.className="col-lg-3";
+    upgradesHidden.style.visibility = "hidden";
+    imgUpgrade.style.webkitAnimation = "fadeInUp3 1s";
+    imgUpgrade.style.animation = "fadeInUp3 1s";
+    iconShow.style.webkitAnimation = "fadeInUp4 1s";
+    iconShow.style.animation = "fadeInUp4 1s";
 }
 //===========================================================
 function setEnergy(energyAux) {
