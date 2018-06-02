@@ -4,7 +4,7 @@ var qtfios = 0;
 var qtenergia = 0;
 var energiasec = 0;
 var timeID;
-var clickQT = 1;
+var clickQT = 100;
 var aux = 3;
 
 // ========= BACK TO NORMAL IMG ONMOUSEDOWN ==============
@@ -14,7 +14,7 @@ function setNoClickFlip() {
 }
 // ==== ADD CIRCUITS AND THREADS WHEN CLICKED ==============
 function clickitens() {
-    myFunctionAdd();
+    snackAdd();
     var element = document.getElementById("img-click");
     element.setAttribute("src", "imgs/noclickFlip.png");
     qtfios = qtfios + clickQT;
@@ -37,13 +37,13 @@ function buyUpgrade(price1, price2, price3, id) {
         document.getElementById('qtfios').innerHTML = parseInt(qtfios);
         document.getElementById('qtcircuitos').innerHTML = parseInt(qtcircuitos);
         document.getElementById('qtenergia').innerHTML = parseInt(qtenergia);
-        myFunctionSucess();
+        snackSucess();
         appUpgrades(id, qtenergia);
         document.getElementById(id).outerHTML = "";
         
     }
     else {
-        myFunctionFailed();
+        snackFailed();
         return;
     }
 }
@@ -51,20 +51,43 @@ function buyUpgrade(price1, price2, price3, id) {
 //===========================================================
 
 //=================FUNCTION SHOW SUCESS OR FAIL ALERT=============================
-function myFunctionSucess() {
+function snackSucess() {
     var x = document.getElementById("snackbar-sucess");
     x.className = "show";
     setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
 }
-function myFunctionFailed() {
+function snackFailed() {
     var x = document.getElementById("snackbar-failed");
     x.className = "show";
     setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
 }
-function myFunctionAdd() {
+function snackAdd() {
     var x = document.getElementById("snackbar-add");
     x.className = "show";
     setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
+}
+function snackNewUpgrade() {
+    var x = document.getElementById("snackbar-newupgrade");
+    x.className = "show";
+    setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
+}
+function showUpgradesOpen(){
+    var x = document.getElementById("upgrades-visible");
+    var y = document.getElementById("upgrades");
+    x.style.visibility = "hidden";
+    x.style.padding = 0;
+    x.style.paddingBottom = 0;
+    y.className="col-lg-3 animation";
+    y.style.visibility = "visible";
+}
+function showUpgradesClose(){
+    var x = document.getElementById("upgrades-visible");
+    var y = document.getElementById("upgrades");
+    x.style.visibility = "visible";
+    x.style.padding = 20;
+    x.style.paddingBottom =40;
+    y.className="col-lg-3";
+    y.style.visibility = "hidden";
 }
 //===========================================================
 function setEnergy(energyAux) {
@@ -85,16 +108,18 @@ function addEnergy(qtenergiax, id) {
 // =========== VERIFY AN UPGRADE AND APPLY IT ==================
 function appUpgrades(id, qtenergiaB) {
     if (id == 'up1') {
-        energiasec = 1;
+        energiasec = 133;
         document.getElementById('qtenergiasec').innerHTML = energiasec;
         addEnergy(qtenergiaB, id);
         document.getElementById("upgrades").appendChild(up3);
+        snackNewUpgrade();
     }
     else if (id == 'up2') {
         clearTimeout(timeID);
-        energiasec = 6;
+        energiasec = 333;
         document.getElementById('qtenergiasec').innerHTML = energiasec;
         addEnergy(qtenergiaB, id);
-        clickQT = 2;
+        clickQT = 232;
+        snackNewUpgrade();
     }
 }

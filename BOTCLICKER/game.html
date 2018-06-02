@@ -22,6 +22,7 @@
         <div id="snackbar-add"> ++
             <img src="imgs/resources.png">
         </div>
+        <div id="snackbar-newupgrade"> New Upgrade Avaliable!</div>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-4" id="res">
@@ -45,16 +46,25 @@
                         <span id="qtenergiasec">0</span>
                     </div>
                     <div id="pointclick" onclick="clickitens()" onmousedown="setNoClickFlip()">
-                            <span id="clickfig" class="selectDisable">
-                                <img id="img-click" src="imgs/noclickFlip.png"/>
-                            </span>
-                        </div>
+                        <span id="clickfig" class="selectDisable">
+                            <img id="img-click" src="imgs/noclickFlip.png" />
+                        </span>
+                    </div>
                 </div>
-               
-                <div class="col-lg-4" id="res">
+
+                <div class="col-lg-3" id="res">
                 </div>
-                <div class="col-lg-4" id="upgrades">
-                    <img class="selectDisable" src="imgs/upgrades.png">
+                <div class="col-lg-1">
+                </div>
+                <div class="col-lg-3" id="upgrades">
+                    <div id="upgrades-visible" onclick="showUpgradesOpen()">
+                        <img class="selectDisable" src="imgs/upgrades-normal.png" class="img-upgrade">
+                        <div id="icon-show">
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                        </div>  
+                    </div>
+
+                    <img class="selectDisable" src="imgs/upgrades.png" class="img-upgrade">
                     <div class="upgrade" id="up1">
                         <p class="p-font-upgrade">Inserir peças faltantes!
                             <br>(ENERGY +1/SEC) </p>
@@ -84,6 +94,9 @@
                         </p>
                         <img class="buttonbuy" src="imgs/upgradebutton.png" onclick="buyUpgrade(175,175,100,'up2')">
                     </div>
+                    <div id="icon-hide" onclick="showUpgradesClose()">
+                        <span class="glyphicon glyphicon-chevron-up"></span>
+                    </div>    
                 </div>
             </div>
         </div>

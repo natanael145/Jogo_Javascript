@@ -1,5 +1,5 @@
 
-/* ---------------SUCESS ALERT-----------------*/
+/* ============== FADE OF SNACK SUCESS ALERT ===============*/
 .alert {
     padding: 20px;
     background-color: #f44336;
@@ -67,7 +67,7 @@
 }
 
 
-/*--------------FAILED ALERT---------*/
+/*============ FADE OF SNACK FAILED ALERT ============*/
 
 .alert {
     padding: 20px;
@@ -114,8 +114,7 @@
     -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
     animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
-
-
+/* ====================== FADE OF SNACK ADD RESOURCES =====================*/
 #snackbar-add {
     text-align: center;
 }
@@ -141,22 +140,55 @@
     -webkit-animation: fadeinn 0.5s, fadeoutt 0.5s 1.5s;
     animation: fadeinn 0.5s, fadeoutt 0.5s 1.5s;
 }
-@-webkit-keyframes fadeinn {
-    from {top: 0; opacity: 0;} 
-    to {top: 30px; opacity: 1;}
+/* ================= FADE OF NEWUPGRADES ALERT ==================*/
+#snackbar-newupgrade {
+    text-align: center;
+}
+#snackbar-newupgrade {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: green;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    right: 9%;
+    bottom: 30px;
+    font-size: 13px;
+    font-family: 'Press Start 2P', cursive;
 }
 
-@keyframes fadeinn {
-    from {top: 0; opacity: 0;}
-    to {top: 30px; opacity: 1;}
+#snackbar-newupgrade.show {
+    visibility: visible;
+    -webkit-animation: fadenewupgrade 3s ;
+    animation: fadenewupgrade 3s;
+}
+@-webkit-keyframes fadenewupgrade {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 50%; opacity: 1;}
 }
 
-@-webkit-keyframes fadeoutt {
-    from {top: 30px; opacity: 1;} 
-    to {top: 0; opacity: 0;}
+@keyframes fadenewupgrade {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 50%; opacity: 1;}
+}
+/* ============== FADE OF NEWUPGRADES DIVS ==================*/
+
+
+@-webkit-keyframes fade {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 130px; opacity: 1;}
 }
 
-@keyframes fadeoutt {
-    from {top: 30px; opacity: 1;}
-    to {top: 0; opacity: 0;}
+@keyframes fade {
+    from {bottom: 0; opacity: 0;}
+    to {top: 130px; opacity: 1;}
+}
+
+.upgrade {
+    -webkit-animation: fade 2.5s;
+    animation: fade 2.5s;
 }

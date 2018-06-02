@@ -27,7 +27,7 @@ body {
 }
 .p-font-upgrade {
     font-family: 'Press Start 2P', cursive;
-    padding: 15px;
+    padding: 5px;
     font-size: 10px;
 }
 #resources {
@@ -36,18 +36,33 @@ body {
 .img-rad{
     border-radius: 100%;
 }
-
 #upgrades {
     margin: auto;
-    margin-top: 20px; 
+    margin-top: 0;
+    visibility: hidden;
+    min-height: 100%;
+    min-width: 20%; 
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    padding-top: 0;
+    position: relative;
+}
+#upgrades-visible {
+    visibility: visible;
+    padding: 20px;
+    padding-bottom: 40px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
 }
 .upgrade {
-    border: solid 1px white;
-    border-radius: 50px;
+    border: solid 5px darkmagenta;
+    border-radius: 50px;   
     padding: 5px;
-    background-color: rgba(255, 255, 255, 0.7);
-    margin: 10px;
+    margin-top: 5px;
+    text-align: center;
     box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.7);
 }
 .buttonbuy {
     width:100; 
@@ -70,8 +85,33 @@ body {
     margin-left: 0; 
     font-family: 'Press Start 2P', cursive;
 }
-#robot-chao {
+#icon-hide {
     position: absolute;
+    font-size: 30px;
+    padding: 0;
+    left: 49%;
     bottom: 5px;
-    padding: 10px;
+    color: darkmagenta;
+    cursor: pointer;
+}
+#icon-show {
+    position: absolute;
+    font-size: 30px;
+    padding: 0;
+    left: 49%;
+    margin-top: 2%;
+    cursor: pointer;
+}
+.animation {
+    animation: upgradesfade 3s ;
+    -webkit-animation: upgradesfade 3s;
+}
+@-webkit-keyframes upgradesfade {
+    from {top: 0; opacity: 0;} 
+    to {top: 100%; opacity: 1;}
+}
+
+@keyframes upgradesfade {
+    from {top: 0; opacity: 0;} 
+    to {top: 100%; opacity: 1;}
 }
