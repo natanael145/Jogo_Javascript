@@ -26,9 +26,11 @@ price2Up3.innerHTML = 875;
 var price3Up3 = document.createElement("span");
 price3Up3.className = "priceC1";
 price3Up3.innerHTML = 750;
+var a = document.createElement("a");
+a.href = "#";
 var buttonbuy = document.createElement("img");
 buttonbuy.className = "buttonbuy";
-buttonbuy.setAttribute("src","imgs/upgradebutton.png");
+buttonbuy.src = "imgs2/upgradebutton.png";
 buttonbuy.setAttribute("onclick","buyUpgrade(700,875,750,'up3')");
 up3.appendChild(threads);
 up3.appendChild(circuits);
@@ -36,5 +38,6 @@ up3.appendChild(energy);
 threads.appendChild(price1Up3);
 circuits.appendChild(price2Up3);
 energy.appendChild(price3Up3)
-up3.appendChild(buttonbuy);
+a.appendChild(buttonbuy);
+up3.appendChild(a);
 //==========================================================================================

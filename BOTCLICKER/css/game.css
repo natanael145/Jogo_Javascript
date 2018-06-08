@@ -15,6 +15,7 @@ body {
     text-align: center;
     border-radius: 10px;
     background-color: transparent;
+    height: 100%;
 }
 .p-font {
     font-family: 'Press Start 2P', cursive;
@@ -30,12 +31,13 @@ body {
     padding: 5px;
     font-size: 10px;
 }
+#git{
+    background: white;
+    border-radius: 50%;
+}
 #resources {
     margin: 10px;
 }  
-.img-rad{
-    border-radius: 100%;
-}
 #upgrades {
     margin: auto;
     margin-top: 0;
@@ -45,7 +47,7 @@ body {
     background-color: rgba(255, 255, 255, 0.7);
     padding: 10px;
     padding-top: 0;
-
+    height: 100%;
 }
 #upgrades-visible {
     visibility: visible;
