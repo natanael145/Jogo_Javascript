@@ -21,6 +21,7 @@ function clickitens() {
     qtcircuitos = qtcircuitos + clickQT;
     document.getElementById('qtfios').innerHTML = qtfios;
     document.getElementById('qtcircuitos').innerHTML = qtcircuitos;
+    document.getElementById('clickQT').innerHTML = clickQT;
 }
 
 //===========================================================
@@ -64,7 +65,7 @@ function snackFailed() {
 function snackAdd() {
     var x = document.getElementById("snackbar-add");
     x.className = "show";
-    setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
+    setTimeout(function () { x.className = x.className.replace("show", ""); }, 1000);
 }
 function snackNewUpgrade() {
     var x = document.getElementById("snackbar-newupgrade");

@@ -20,8 +20,7 @@
     <body>
         <div id="snackbar-sucess"> Upgrade sucess!</div>
         <div id="snackbar-failed"> Upgrade failed!</div>
-        <div id="snackbar-add"> ++
-            <img src="imgs2/resources.png">
+        <div id="snackbar-add" class="selectDisable"> +<span id="clickQT"></span>
         </div>
         <div id="snackbar-newupgrade"> New Upgrade Avaliable!</div>
         <div class="container-fluid">
@@ -46,27 +45,23 @@
                         <img class="selectDisable" src="imgs2/energysec.png" width="100" height="40" />
                         <span id="qtenergiasec">0</span>
                     </div>
-                    <div id="pointclick" onclick="clickitens()" onmousedown="setNoClickFlip()">
-                        <span id="clickfig" class="selectDisable">
-                            <img id="img-click" src="imgs/noclickFlip.png" />
-                        </span>
-                    </div>
+
                 </div>
 
-                <div class="col-lg-3">
-                   a
+                <div class="col-lg-3" style="visibility:hidden">
+                    a
                 </div>
-                <div class="col-lg-1">
+                <div class="col-lg-1" style="visibility:hidden">
                     a
                 </div>
                 <div class="col-lg-3" id="upgrades">
                     <div id="upgrades-visible" onclick="showUpgradesOpen()">
                         <div id="img-upgrade">
-                            <img class="selectDisable" src="imgs2/upgrades-normal.png" >
+                            <img class="selectDisable" src="imgs2/upgrades-normal.png">
                         </div>
                         <div id="icon-show">
                             <span class="glyphicon glyphicon-chevron-down"></span>
-                        </div>  
+                        </div>
                     </div>
 
                     <img class="selectDisable" src="imgs2/upgrades.png">
@@ -79,7 +74,7 @@
                         <p class="p-font-priceUpgrade"> CIRCUITS :
                             <span class="priceB1">25</span>
                         </p>
-                        <img class="buttonbuy" src="imgs2/upgradebutton.png" onclick="buyUpgrade(25,25,0,'up1')"/>
+                        <img class="buttonbuy" src="imgs2/upgradebutton.png" onclick="buyUpgrade(25,25,0,'up1')" />
                     </div>
                     <div class="upgrade" id="up2">
                         <p class="p-font-upgrade">
@@ -101,10 +96,22 @@
                     </div>
                     <div id="icon-hide" onclick="showUpgradesClose()">
                         <span class="glyphicon glyphicon-chevron-up"></span>
-                    </div>    
+                    </div>
                 </div>
                 <div class="col-lg-1">
-                    <a href="https://github.com/natanfernandes"><div id="git"><img src="imgs/git.png" width="80" height="100"></div></a>
+                    <a href="https://github.com/natanfernandes">
+                        <div id="git">
+                            <img src="imgs/github.svg" width="80" height="100">
+                            <p>Visit developer's GitHub!</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="row">
+                    <div id="pointclick" onclick="clickitens()" onmousedown="setNoClickFlip()">
+                        <span id="clickfig" class="selectDisable">
+                            <img id="img-click" src="imgs/noclickFlip.png" />
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>

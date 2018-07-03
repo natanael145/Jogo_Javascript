@@ -32,8 +32,13 @@ body {
     font-size: 10px;
 }
 #git{
-    background: white;
-    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    text-align: center;
+    margin:0;   
+    padding: 0;
+
 }
 #resources {
     margin: 10px;
@@ -114,4 +119,3 @@ body {
     position: relative;
     top: 5%;
 }
-
